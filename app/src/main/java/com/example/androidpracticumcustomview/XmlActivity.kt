@@ -6,6 +6,7 @@ import android.os.Looper
 import android.widget.TextView
 import androidx.activity.ComponentActivity
 import com.example.androidpracticumcustomview.ui.theme.CustomContainer
+import androidx.core.graphics.toColorInt
 
 
 class XmlActivity : ComponentActivity() {
@@ -22,13 +23,19 @@ class XmlActivity : ComponentActivity() {
         }
 
         val firstView = TextView(this).apply {
-            // TODO
-            // ...
+            setText("First View")
+            width = 300
+            height = 300
+            setBackgroundColor("#fc6c6a".toColorInt())
         }
 
+        customContainer.addView(firstView)
+
         val secondView = TextView(this).apply {
-            // TODO
-            // ...
+            setText("Second View")
+            width = 300
+            height = 300
+            setBackgroundColor("#82fc6a".toColorInt())
         }
 
         // Добавление второго элемента через некоторое время (например, по задержке)
